@@ -20,6 +20,7 @@ class MercadoModel extends Model
         'hora_apertura',
         'hora_cierre',
         'tipo_mercado',
+        
     ];
 
     

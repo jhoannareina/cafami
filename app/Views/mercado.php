@@ -20,6 +20,7 @@
                             <div class="item item-type-zoom">
                                 <a href="<?= base_url('mercado/' . esc($value['id_mercado'])); ?>" class="item-hover">
                                     <?= esc($value['nombre_mercado']); ?>
+                                    <?= esc($value['ubicacion']); ?>
                                 </a>
                                 <div class="item-info">
                                     <div class="headline">
@@ -29,11 +30,11 @@
                                             <?= $value['ubicacion'] ?>
                                         </div>
                                     </div>
+
                                 </div>
                                 </a>
                                 <div class="item-img">
                                     <img src="<?= base_url() . $value['url']; ?>" alt="sp-menu">
-
                                 </div>
                             </div>
                         <?php

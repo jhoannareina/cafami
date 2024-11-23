@@ -536,6 +536,7 @@ html, body{ height: 100%; }
     transform: translate3d(-50%, 20px, 0);
     opacity: 0;
   }
+  
   @media (min-width: 768px) {
     from {
       -webkit-transform: translate(-50%, 0);
@@ -707,7 +708,7 @@ html, body{ height: 100%; }
     font-size: 18px;
     width: 75%;
     margin: 0 auto;
-    border: 4px solid #ffffff;
+    border: 4px solid #161616;
     padding: 10px;
 }
 
@@ -739,7 +740,7 @@ html, body{ height: 100%; }
 	position:absolute;
 	height:100%;
 	width:100%;
-	background:rgba(231, 91, 30, 0.5);
+	background:rgba(227, 116, 69, 0.5);
 	top:0px;
 	left:0px;
 }
