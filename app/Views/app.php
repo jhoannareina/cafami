@@ -20,7 +20,7 @@
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="<?= base_url('assets/images/favicon.ico'); ?>" type="image/x-icon">
+    <link rel="shortcut icon" href="<?= base_url('assets/images/image.ico'); ?>" type="image/x-icon">
     <link rel="apple-touch-icon" href="<?= base_url('assets/images/apple-touch-icon.png'); ?>">
 
     <!-- Bootstrap CSS -->
@@ -37,6 +37,15 @@
 
     <!-- Modernizer -->
     <script src="<?= base_url('assets/js/modernizer.js'); ?>"></script>
+
+    <!-- <link rel="stylesheet" href="<?= base_url('template2'); ?>/assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url('template2'); ?>/assets/css/vendor/animate.min.css">
+    <link rel="stylesheet" href="<?= base_url('template2'); ?>/assets/css/plugins/swiper.min.css">
+    <link rel="stylesheet" href="<?= base_url('template2'); ?>/assets/css/vendor/magnific-popup.css">
+    <link rel="stylesheet" href="<?= base_url('template2'); ?>/assets/css/vendor/fontawesome-pro.css">
+    <link rel="stylesheet" href="<?= base_url('template2'); ?>/assets/css/vendor/spacing.css"> 
+    <link rel="stylesheet" href="<?= base_url('template2'); ?>/assets/css/plugins/odometer-theme-default.css">
+    <link rel="stylesheet" href="<?= base_url('template2'); ?>/assets/css/main.css"> -->
 </head>
 
 <body>
@@ -60,5 +69,7 @@
 
 <!-- ALL PLUGINS -->
 <script src="<?= base_url('assets/js/custom.js'); ?>"></script>
+
+<?= $this->renderSection('script') ?>
 
 </html>

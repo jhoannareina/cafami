@@ -1,5 +1,11 @@
 <?= $this->extend('app') ?>
 <?= $this->section('content') ?>
+<style>
+  .font-bold {
+    font-weight: 700;
+  }
+</style>
+
 
 <div class="special-menu pad-top-100 parallax">
     <div class="container">
@@ -19,19 +25,16 @@
                         foreach ($mercado as $value): ?>
                             <div class="item item-type-zoom">
                                 <a href="<?= base_url('mercado/' . esc($value['id_mercado'])); ?>" class="item-hover">
-                                    <?= esc($value['nombre_mercado']); ?>
-                                    <?= esc($value['ubicacion']); ?>
-                                </a>
-                                <div class="item-info">
-                                    <div class="headline">
-                                        <?= $value['nombre_mercado'] ?>
-                                        <div class="line"></div>
-                                        <div class="dit-line">
-                                            <?= $value['ubicacion'] ?>
+                                    <div class="item-info">
+                                        <div class="headline">
+                                            <h2 class="text-uppercase color-white font-bold"><?= $value['nombre_mercado'] ?></h2>
+                                            <div class="line"></div>
+                                            <div class="dit-line">
+                                                <?= $value['ubicacion'] ?>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                </div>
+                                    </div>
                                 </a>
                                 <div class="item-img">
                                     <img src="<?= base_url() . $value['url']; ?>" alt="sp-menu">
@@ -48,8 +51,6 @@
         <!-- end col -->
     </div>
     <!-- end row -->
-</div>
-<!-- end container -->
 </div>
 
 <?= $this->endSection() ?>

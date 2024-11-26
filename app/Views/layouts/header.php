@@ -13,9 +13,8 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <div class="logo">
-                                <a class="navbar-brand js-scroll-trigger logo-header" href="#">
+                                <a class="navbar-brand js-scroll-trigger logo-header" href="<?= base_url("/") ?>">
                                     <img src="<?= base_url('assets/images/logo.png'); ?>" alt="" style="width: 235px; height:62px;">
-
                                 </a>
                             </div>
                         </div>
@@ -24,8 +23,8 @@
                                 <li><a href="<?= base_url("principal") ?>">Inicio</a></li>
                                 <li><a href="<?= base_url("mercado") ?>">Mercados</a></li>
                                 <li><a href="<?= base_url("producto") ?>">Productos</a></li>
-                                <li><a href="<?= base_url("") ?>"></a></li>
-                                <li><a href="<?= base_url("") ?>"></a></li>
+                                <li><a href=""></a></li>
+                                <li><a href=""></a></li>
                             </ul>
                         </div>
                         <!-- end nav-collapse -->

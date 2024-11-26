@@ -16,9 +16,9 @@
 
                         <h2>Los Precios al Alcance de tu Hogar</h2>
                         <p>"Bienvenido a CAFAMI, la plataforma boliviana que te ayuda a comparar precios y ahorrar. Descubre los mejores productos de diferentes mercados en La Paz y otras ciudades, todo en un solo lugar. ¡Decidir nunca fue tan fácil!"</p>
-                        <div class="book-btn">
+                        <!-- <div class="book-btn">
                             <a href="#reservation" class="table-btn hvr-underline-from-center">¿Que quiere comprar?</a>
-                        </div>
+                        </div> -->
                         <a href="#about">
                             <div class="mouse"></div>
                         </a>

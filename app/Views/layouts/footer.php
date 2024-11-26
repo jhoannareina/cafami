@@ -26,14 +26,14 @@
                     <div class="footer-in-main">
                         <div class="footer-logo">
                             <div class="text-center">
-                                <img src="images/logo.png" alt="" />
+                                <!-- <img src="<= base_url()?>/assets/images/logo.png" alt="" /> -->
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
                             <div class="footer-box-a">
                                 <h3>Inicio</h3>
                                 <p>Bienvenido a CAFAMI lugar en donde podrás consultar los precios de la canasta familiar, podrás realizar la comparación de las diferentes ferias y mercados de abastecimiento de alimentos de la ciudad de La Paz y El Alto </p>
-                                <ul class="socials-box footer-socials pull-left">
+                                <!-- <ul class="socials-box footer-socials pull-left">
                                     <li>
                                         <a href="#">
                                             <div class="social-circle-border"><i class="fa  fa-facebook"></i></div>
@@ -59,26 +59,25 @@
                                             <div class="social-circle-border"><i class="fa fa-linkedin"></i></div>
                                         </a>
                                     </li>
-                                </ul>
+                                </ul> -->
 
                             </div>
                             <!-- end footer-box-a -->
                         </div>
                         <!-- end col -->
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="col-lg-6 col-md-3 col-sm-6 col-xs-12">
                             <div class="footer-box-b">
                                 <h3>Mercados</h3>
                                 <ul>
-                                    <li><a href="#">Mercado Rodriguez</a></li>
-                                    <li><a href="#">Mercado Yungas</a></li>
-                                    <li><a href="#">Feria 16 de Julio</a></li>
-                                    <li><a href="#">Feria de Rio Seco</a></li>
+                                    <?php foreach($listaMercados as $value) :?>
+                                        <li><a href="<?= base_url('mercado/' . $value['id_mercado']) ?>"><?= $value['nombre_mercado']?></a></li>
+                                    <?php endforeach ?>
                                 </ul>
                             </div>
                             <!-- end footer-box-b -->
                         </div>
                         <!-- end col -->
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <div class="footer-box-c">
                                 <h3>Contact Us</h3>
                                 <p>
@@ -96,10 +95,9 @@
                                     <span><a href="#">support@foodfunday.com</a></span>
                                 </p>
                             </div>
-                            <!-- end footer-box-c -->
-                        </div>
+                        </div> -->
                         <!-- end col -->
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <!-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <div class="footer-box-d">
                                 <h3>Opening Hours</h3>
 
@@ -114,8 +112,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <!-- end footer-box-d -->
-                        </div>
+                        </div> -->
                         <!-- end col -->
                     </div>
                     <!-- end footer-in-main -->
