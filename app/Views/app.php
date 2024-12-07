@@ -38,14 +38,6 @@
     <!-- Modernizer -->
     <script src="<?= base_url('assets/js/modernizer.js'); ?>"></script>
 
-    <!-- <link rel="stylesheet" href="<?= base_url('template2'); ?>/assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= base_url('template2'); ?>/assets/css/vendor/animate.min.css">
-    <link rel="stylesheet" href="<?= base_url('template2'); ?>/assets/css/plugins/swiper.min.css">
-    <link rel="stylesheet" href="<?= base_url('template2'); ?>/assets/css/vendor/magnific-popup.css">
-    <link rel="stylesheet" href="<?= base_url('template2'); ?>/assets/css/vendor/fontawesome-pro.css">
-    <link rel="stylesheet" href="<?= base_url('template2'); ?>/assets/css/vendor/spacing.css"> 
-    <link rel="stylesheet" href="<?= base_url('template2'); ?>/assets/css/plugins/odometer-theme-default.css">
-    <link rel="stylesheet" href="<?= base_url('template2'); ?>/assets/css/main.css"> -->
 </head>
 
 <body>

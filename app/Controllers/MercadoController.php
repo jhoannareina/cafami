@@ -25,7 +25,17 @@ class MercadoController extends BaseController
         // Buscar el mercado por el id
         $listaMercados = $mercadoModel->findAll();
         $mercado = $mercadoModel->find($id_mercado);
+
         $productos = $mercadoModel->getProductos($id_mercado);
+
+        foreach ($productos as &$producto) {  // Nota el & para modificar el array original
+            $producto['precios'] = $mercadoModel->getProductosAndPrecios($id_mercado, $producto['id_producto']);
+        }
+        unset($producto); // Limpiamos la referencia
+
+        // dd($productos);
+
+        // dd($productos);
         $categorias = $categoriaModel->findAll();
         $pager = $mercadoModel->pager;
         // dd($productos);

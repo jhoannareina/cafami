@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -101,7 +101,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="search__form">
+                        <!-- <div class="search__form">
                             <form action="#">
                                 <div class="search__input">
                                     <input class="search-input-field" type="text" placeholder="Type here to search...">
@@ -118,7 +118,7 @@
                                     </button>
                                 </div>
                             </form>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -346,6 +346,8 @@
     <script src="<?= base_url('template2'); ?>/assets/js/plugins/smoothscroll.js"></script>
     <script src="<?= base_url('template2'); ?>/assets/js/vendor/ajax-form.js"></script>
     <script src="<?= base_url('template2'); ?>/assets/js/main.js"></script>
+
+    <?= $this->renderSection('script') ?>
 </body>
 
 

@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay="0.1s">
+                <div class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0.1s">
                     <h2 class="block-title color-white text-center"> Navega en los mercados de la ciudad de La Paz desde un solo lugar </h2>
                     <h5 class="title-caption text-center">
                         Compara los precios de frutas, verduras y productos esenciales de la canasta familiar en los mercados yy ferias más concurridos de La Paz.
@@ -33,7 +33,6 @@
                                                 <?= $value['ubicacion'] ?>
                                             </div>
                                         </div>
-
                                     </div>
                                 </a>
                                 <div class="item-img">

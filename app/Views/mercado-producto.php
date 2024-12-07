@@ -75,46 +75,95 @@
                 <!-- Breadcrumb area start  -->
 
                 <!-- wishlist area start -->
-                <section class="wishlist section-space overflow-hidden pt-0">
+                <section class="shop section-space-120" style="padding-top: 0;">
                     <div class="container">
-                        <div class="table-content wishlist-table table">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th class="px-4">N°</th>
-                                        <th class="product-price">Producto</th>
-                                        <th class="product-price px-4"> Precio</th>
-                                        <th class="product-price"> Unidad Medidad / Precio</th>
-                                        <th class="product-quantity">Categoria</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($productos as $key => $value) : ?>
-                                        <tr>
-                                            <td class="product__price"><span class="amount"><?= $value['id_producto'] ?></span></td>
-                                            <td class="product__wrapper">
-                                                <div class="product__name">
-                                                    <h6 class="title text-uppercase"><a href="javascript::void(0)"><?= $value['producto'] ?></a></h6>
-                                                </div>
-                                            </td>
-                                            <td class="product__price"><span class="amount"><?= $value['precio']?> Bs.</span></td>
-                                            <td class="product__price"><span class="amount"><?= $value['medida'] ?> <?= $value['precio_1'] ?> Bs. </span></td>
-                                            <td class="product__quantity">
-                                                <span><?= $value['categoria'] ?></a></span>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach ?>
-                                    <?php if (count($productos) == 0) : ?>
-                                        <td colspan="5">
-                                            <p>No hay productos disponibles.</p>
-                                        </td>
-                                    <?php endif ?>
-                                </tbody>
-                            </table>
+                        <div class="row mb-minus-30">
+                            <?php foreach ($productos as $key => $value) : ?>
+                                <div class="col-xl-3 col-lg-4 col-md-6">
+                                    <div class="featured-product__item mb-30 ">
+                                        <a data-bs-toggle="modal" data-bs-target="#modal-main" href="#" class="featured-product__media">
+                                            <img src="<?= base_url('assets/images/productos/') . $value['producto'] ?>.jfif" alt="image not found">
+                                        </a>
+                                        <div class="featured-product__content">
+                                            <h6 class="text-uppercase"><a href="#"><?= $value['producto'] ?></a></h6>
+                                        </div>
+                                        <ul class="featured-product__action-btn">
+                                            <li><a data-id="<?= $value['id_producto'] ?>" data-bs-toggle="modal" data-bs-target="#modal-<?= $value['id_producto'] ?>" href="#" style="border-radius: 500px;width: 11rem;"><i class="fa-light fa-eye" style="margin-right: 5px;"></i> Ver precios</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="modal-<?= $value['id_producto'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-xl">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel" style="font-size: 2rem !important; font-family: inherit;">Precios <?= $value['producto'] ?></h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <section class="wishlist section-space overflow-hidden pt-0">
+                                                    <div class="container">
+                                                        <div class="table-content wishlist-table table">
+                                                            <table class="table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="product-price">N°</th>
+                                                                        <th class="product-price">Medida</th>
+                                                                        <th class="product-price"> Tamaño</th>
+                                                                        <th class="product-quantity">Precio</th>
+                                                                        <th class="product-quantity">Precio 1</th>
+                                                                        <th class="product-quantity">Precio media (1/2)</th>
+                                                                        <th class="product-quantity" style="font-size: 1.3rem;">Precio cuarta (1/4)</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <?php $count = 1 ?>
+                                                                    <?php foreach ($value['precios'] as $key => $v) : ?>
+                                                                        <tr>
+                                                                            <td class="product__price"><span class="amount"><?= $count++ ?></span></td>
+                                                                            <td class="product__price"><span class="amount"><?= $v['medida'] ?></span></td>
+                                                                            <td class="product__quantity">
+                                                                                <span><?= $v['nombre_proporcion'] ?></a></span>
+                                                                            </td>
+                                                                            <td class="product__price"><span class="amount"><?= $v['precio'] ?> Bs.</span></td>
+                                                                            <td class="product__price"><span class="amount"><?= $v['precio_1'] ?> Bs.</span></td>
+                                                                            <td class="product__price"><span class="amount"><?= $v['precio_1/2'] ?> Bs.</span></td>
+                                                                            <td class="product__price"><span class="amount"><?= $v['precio_1/4'] ?> Bs.</span></td>
+                                                                            
+                                                                            
+                                                                            <!-- <td class="product__quantity">
+                                                                                <span><= $v['nombre_mercado'] ?></a></span>
+                                                                            </td> -->
+                                                                        </tr>
+                                                                    <?php endforeach ?>
+                                                                    <?php if (count($value['precios']) == 0) : ?>
+                                                                        <td colspan="4">
+                                                                            <p>No hay precios disponibles.</p>
+                                                                        </td>
+                                                                    <?php endif ?>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endforeach ?>
                             <?= $pager->links('default', 'bootstrap'); ?>
+                            <?php if (count($productos) == 0) : ?>
+                                <td colspan="5">
+                                    <p>No hay productos disponibles.</p>
+                                </td>
+                            <?php endif ?>
                         </div>
                     </div>
                 </section>
+
                 <!-- wishlist area start -->
 
                 <!--latest-instagram area start-->
@@ -175,5 +224,8 @@
     </div>
 </section>
 
+
+<?= $this->endSection() ?>
+<?= $this->section('script') ?>
 
 <?= $this->endSection() ?>
